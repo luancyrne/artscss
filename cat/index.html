@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="cat">
+        <div class="ears">
+            <div class="ear1"></div>
+            <div class="ear2"></div>
+        </div>
+        <div class="face">
+            <div class="eye1">
+                <div class="eyelid1"></div>
+                <div class="eyecenter1" id="eyecenter1">
+                    <div class="irs"></div>
+                </div>
+            </div>
+            <div class="nose"></div>
+            <div class="eye2">
+                <div class="eyelid2"></div>
+                <div class="eyecenter2" id="eyecenter2">
+                    <div class="irs"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="leftpaws">
+        <div class="leftpaw1">
+
+        </div>
+        <div class="leftpaw2">
+
+        </div>
+        <div class="leftpaw3">
+
+        </div>
+        <div class="leftpaw4">
+
+        </div>
+    </div>
+
+    <div class="rightpaws">
+        <div class="rightpaw1">
+
+        </div>
+        <div class="rightpaw2">
+
+        </div>
+        <div class="rightpaw3">
+
+        </div>
+        <div class="rightpaw4">
+
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                setInterval(() => {
+                    document.querySelector('.eyelid1').style.height = '100%'
+                    document.querySelector('.eyelid2').style.height = '100%'
+                    setTimeout(() => {
+                        document.querySelector('.eyelid1').style.height = '0'
+                        document.querySelector('.eyelid2').style.height = '0'
+                    }, 500)
+                }, 3000);
+            }, 3000)
+        })
+    </script>
+</body>
+
+</html>
