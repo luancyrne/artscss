@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="top">
+        <div class="doorstructure">
+            <div class="portal">
+                <div class="otherside closeshadow" id="otherside">
+                </div>
+                <div class="door" id="door">
+                    <div class="doorleft" id="doorleft"></div>
+                    <div class="handle" id="handle">
+                        <div class="handlemiddle">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="down">
+        <div class="shadowexpansive" id="shadowexpansive">
+        </div>
+    </div>
+    <script>
+        let doorStatus = false;
+        const handle = document.getElementById('handle')
+        const doorleft = document.getElementById('doorleft')
+        const door = document.getElementById('door')
+        const otherside = document.getElementById('otherside');
+        const shadowexpansive = document.getElementById('shadowexpansive');
+        handle.addEventListener('click', () => {
+            if (!doorStatus) {
+                doorStatus = !doorStatus
+                otherside.classList.remove('closeshadow')
+                shadowexpansive.classList.add('shadowexpansiveopen')
+                doorleft.classList.add('doorleftopen')
+                handle.classList.add('handleopen')
+                door.classList.add('dooropen')
+            } else {
+                doorStatus = !doorStatus
+                otherside.classList.add('closeshadow')
+                shadowexpansive.classList.remove('shadowexpansiveopen')
+                doorleft.classList.remove('doorleftopen')
+                handle.classList.remove('handleopen')
+                door.classList.remove('dooropen')
+            }
+        })
+    </script>
+</body>
+
+</html>
